@@ -59,8 +59,12 @@ body {
 
 html,
 body {
-	height: 100%;
-	width: 100%;
+	/*height: 100%;
+	width: 100%;*/
+	height: 111%;
+	width: 111%;
+	transform-origin: top left;
+	transform: scale(0.9);
 	position: fixed;
 	overscroll-behavior: none;
 }
@@ -1017,7 +1021,8 @@ textarea {
 	text-overflow: ellipsis;
 	line-height: 24px;
 	padding: 8px 24px;
-	max-width: 170px;
+	/*max-width: 170px;*/
+	max-width: 80%;
 	position: relative;
 }
 .bname {
@@ -1536,7 +1541,8 @@ TD .checkmark, TD .radiomark {
 @media all and (min-width: 1024px) and (max-width: 1249px) {
 	#segutil, #segutil2, #segcont, #putil, #pcont, #pql, #fx, #palw, #psFind, #sliders {
 		width: 100%;
-		max-width: 280px;
+		/*max-width: 280px;*/
+		max-width: 90%;
 		font-size: 18px;
 	}
 	#picker {
@@ -1577,4 +1583,32 @@ TD .checkmark, TD .radiomark {
 		text-overflow: ellipsis;
 		overflow-x: clip;
 	}
+}
+
+div#Presets.tabcontent div#pcont {
+	max-width: 100% !important;
+}
+
+div#Presets.tabcontent div#pcont.list .pres.lstI.expanded {
+	width: 100%;
+}
+
+div#Presets.tabcontent div#pcont.list .pres.lstI.expanded .presin.lstIcontent {
+	width: 97%;
+}
+
+div#Presets.tabcontent div#pcont.list .pres.lstI.expanded div.pname.lstIname i.icons.edit-icon.flr {
+	right: 6px;
+}
+
+div#Segments.tabcontent div#segcont .seg.lstI div.segname i.icons.e-icon.frz {
+	left: 38px;
+}
+
+div#Segments.tabcontent div#segcont .seg.lstI .icons.e-icon.flr {
+	right: 31px;
+}
+
+.lstIname {
+	text-align: left;
 }
