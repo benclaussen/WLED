@@ -59,12 +59,8 @@ body {
 
 html,
 body {
-	/*height: 100%;
-	width: 100%;*/
-	height: 111%;
-	width: 111%;
-	transform-origin: top left;
-	transform: scale(0.9);
+	height: 100%;
+	width: 100%;
 	position: fixed;
 	overscroll-behavior: none;
 }
@@ -1021,8 +1017,7 @@ textarea {
 	text-overflow: ellipsis;
 	line-height: 24px;
 	padding: 8px 24px;
-	/*max-width: 170px;*/
-	max-width: 80%;
+	max-width: 170px;
 	position: relative;
 }
 .bname {
@@ -1043,6 +1038,7 @@ textarea {
 
 .pname {
 	top: 1px;
+	text-align: left;
 }
 .plname {
 	top:0;
@@ -1541,8 +1537,7 @@ TD .checkmark, TD .radiomark {
 @media all and (min-width: 1024px) and (max-width: 1249px) {
 	#segutil, #segutil2, #segcont, #putil, #pcont, #pql, #fx, #palw, #psFind, #sliders {
 		width: 100%;
-		/*max-width: 280px;*/
-		max-width: 90%;
+		max-width: 280px;
 		font-size: 18px;
 	}
 	#picker {
@@ -1585,30 +1580,34 @@ TD .checkmark, TD .radiomark {
 	}
 }
 
-div#Presets.tabcontent div#pcont {
-	max-width: 100% !important;
+.segname, .pname, .bname  {
+	font-size: small;
+	font-weight: bold;
 }
 
-div#Presets.tabcontent div#pcont.list .pres.lstI.expanded {
+#segcont #segname {
+	font-size: 10px;
+}
+
+#pcont, #pcont .pname.lstIname {
+	max-width: 100%;
+}
+
+#pcont .pname.lstIname {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.lstI {
+	margin: 9px auto 0;
+	border: 0px;
+	border-radius: 10px;
+}
+
+#pcont .pres.lstI.expanded {
 	width: 100%;
 }
 
-div#Presets.tabcontent div#pcont.list .pres.lstI.expanded .presin.lstIcontent {
-	width: 97%;
-}
-
-div#Presets.tabcontent div#pcont.list .pres.lstI.expanded div.pname.lstIname i.icons.edit-icon.flr {
-	right: 6px;
-}
-
-div#Segments.tabcontent div#segcont .seg.lstI div.segname i.icons.e-icon.frz {
-	left: 38px;
-}
-
-div#Segments.tabcontent div#segcont .seg.lstI .icons.e-icon.flr {
-	right: 31px;
-}
-
-.lstIname {
-	text-align: left;
+#pcont .pres.lstI.expanded .presin.lstIcontent {
+	width: 95%;
 }
